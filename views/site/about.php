@@ -4,15 +4,16 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About';
+$this->title = 'Acerca de ..';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        This is the About page. You may modify the following file to customize its content:
+        Este sistema fue desarrollado bajo la tutoria del profesor Vasconcelos para la maestrías de TI en el ITVH.
     </p>
-
-    <code><?= __FILE__ ?></code>
+    Contacto<br>
+    Moises Aguilar Mendoza<br>
+    Correo electronico: <a href="mailto:armandoaguilar1@hotmail.com"> armandoaguilar1@hotmail.com</a>.
 </div>

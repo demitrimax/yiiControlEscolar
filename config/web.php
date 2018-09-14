@@ -6,6 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
+    'name' => 'Aplicación Web de prueba',
     'language' => 'es-ES',
     'timezone' => 'America/Mexico_City',
     'bootstrap' => ['log'],
