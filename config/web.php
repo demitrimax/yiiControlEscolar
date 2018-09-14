@@ -6,6 +6,8 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
+    'language' => 'es-ES',
+    'timezone' => 'America/Mexico_City',
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -43,14 +45,17 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '<controller:\w+/<id:\d+>'                  => '<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>'    => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>'             => '<controller>/<action>',
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];
