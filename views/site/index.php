@@ -2,25 +2,25 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Pronóstico de Ventas';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
         <h1>Bienvenido</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">Automatización de los pronósticos de ventas para generar el perfil de ingresos de una empresa perforadora a partir del movimiento de equipos.</p>
 
-        <p><a class="btn btn-lg btn-danger" href="http://www.yiiframework.com">Mi aplicacion</a></p>
+        <p><a class="btn btn-lg btn-danger" href="http://www.yiiframework.com">Escenarios</a></p>
     </div>
 
     <div class="body-content">
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Alumnos</h2>
+                <h2>Movimiento de Equipos</h2>
 
-                <p>Catalogo de Alumnos del sistema de Control Escolar</p>
+                <p>Estos escenarios son el principal insumo para el calculo de ingreso, ya que de aquí se obtienen los ingresos por concepto de renta diaría de equipo de perforación.</p>
 
                 <p><a class="btn btn-default" href="alumnos/">Alumnos &raquo;</a></p>
             </div>
