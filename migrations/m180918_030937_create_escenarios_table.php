@@ -14,7 +14,8 @@ class m180918_030937_create_escenarios_table extends Migration
     {
         $this->createTable('escenarios', [
             'id' => $this->primaryKey(),
-            'descripcion' => $this->string()->notNull(),
+            'nombre' => $this->string(15)->notNull()->unique(),
+            'descripcion' => $this->text()->notNull(),
             'fecha' => $this->date(),
         ]);
     }

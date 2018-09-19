@@ -1,0 +1,11 @@
+notas
+
+php yii migrate/create create_catcias_table --fields="nombre:string(35):unique:notnull,rfc:string(12),nomcorto:string(10):notNull,nacionalidad:string"
+
+php yii migrate/create create_tipoequipo_table --fields="ntipo:string(10):unique:notnull, descripcion:string"
+
+php yii migrate/create create_eqcaracprin_table --fields="nombre:string(10):unique:notnull, orden:integer"
+
+php yii migrate/create create_catclase_table --fields="nombre:string(10):unique:notnull, nomcorto:string(5)"
+
+php yii migrate/create create_catequipos_table --fields="clave:integer, nombre:string(35):notNull, nomcorto:string(10), tequipo:integer:notNull:foreignKey(tipoequipo), cia_id:integer:notNull:foreignKey(catcias), marcamalacate:string(35), hp:integer, ta:string(10), clase:integer:notNull:foreignKey(catclase), aniocompra:integer, anioconst:integer, noactivofijo:string(10)"
