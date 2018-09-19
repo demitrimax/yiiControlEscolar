@@ -43,8 +43,8 @@ class Tipoequipo extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'ntipo' => 'Ntipo',
-            'descripcion' => 'Descripcion',
+            'ntipo' => 'Nombre tipo',
+            'descripcion' => 'Descripción',
         ];
     }
 
