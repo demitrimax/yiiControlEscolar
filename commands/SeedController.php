@@ -1,5 +1,56 @@
 <?php
 
+// commands/SeedController.php
+namespace app\commands;
+
+use yii\console\Controller;
+use app\models\tipoequipo;
+
+class SeedController extends Controller
+{
+    public function actionIndex()
+    {
+
+		$seeder = new \tebazil\yii2seeder\Seeder();
+		$generator = $seeder->getGeneratorConfigurator();
+		$faker = $generator->getFakerConfigurator();
+
+
+		$array = [
+			['ntipo' => 'BARCOPERF', 'descripcion' => 'Barco perforador'],
+			['ntipo' => 'MOD', 'descripcion' => 'Modular'],
+			['ntipo' => 'A/E', 'descripcion' => 'Autoelevable'],
+			['ntipo' => 'S/S', 'descripcion' => 'Semisumergible'],
+			['ntipo' => 'FIJO', 'descripcion' => 'Terrestre'],
+			['ntipo' => 'LACUSTRE', 'descripcion' => 'Lacustre'],
+			['ntipo' => 'ALIG', 'descripcion' => 'Aligerado'],
+			['ntipo' => 'SNUB', 'descripcion' => 'Snubbing'],
+			['ntipo' => 'FIJO', 'descripcion' => 'TRP'],
+			['ntipo' => 'EMP', 'descripcion' => 'Empaquetado']
+		];
+
+			//print_r($array);			
+			foreach ($array as $equipo)
+			{
+				//print('hola ');
+				//print($equipo['ntipo']);
+				//$tequipo->setIsNewRecord(true);
+				$tequipo = new tipoequipo();
+				$tequipo->ntipo = $equipo['ntipo'];
+				$tequipo->descripcion = $equipo['descripcion'];
+				$tequipo->save();
+			}
+			$array = [
+				[],
+				
+			];
+
+			
+    }
+}
+/*
+<?php
+
 namespace app\commands;
 
 use yii\console\Controller;
@@ -15,7 +66,7 @@ class SeedController extends \yii\web\Controller
 		$generator = $seeder->getGeneratorConfigurator();
 		$faker = $generator->getFakerConfigurator();
 
-		/* $seeder->table('article')->columns([
+		 $seeder->table('article')->columns([
 		    'id', //automatic pk
 		    'book_id', //automatic fk
 		    'name'=>$faker->firstName,
@@ -33,7 +84,7 @@ class SeedController extends \yii\web\Controller
 		    'book_id',
 		    'name'=>$faker->text(20),
 		    'type'=>$faker->randomElement(['shop','cv','test']),
-		])->rowQuantity(30); */
+		])->rowQuantity(30); 
 		$array = [
 			['ntipo' => 'BARCOPERF', 'descripcion' => 'Barco perforador'],
 			['ntipo' => 'MOD', 'descripcion' => 'Modular'],
@@ -52,3 +103,4 @@ class SeedController extends \yii\web\Controller
 	}
 	
 }
+*/
