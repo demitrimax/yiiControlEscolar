@@ -7,7 +7,7 @@ $this->title = 'Pronóstico de Ventas';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Bienvenido</h1>
+        <h1>Movimiento de Equipos</h1>
 
         <p class="lead">Automatización de los pronósticos de ventas para generar el perfil de ingresos de una empresa perforadora a partir del movimiento de equipos.</p>
 
