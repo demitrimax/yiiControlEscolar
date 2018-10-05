@@ -93,6 +93,10 @@ class SeedController extends Controller
 				$company->save();
 			}
 
+			$array = [
+				
+			];
+
 			
     }
 }
